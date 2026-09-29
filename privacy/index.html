@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tintora — Privacy Policy</title>
+<meta name="description" content="Tintora privacy policy: the app collects no data and does not connect to the internet; photos and colours stay on your device, encrypted.">
+<link rel="icon" href="../tintora.png">
+<style>
+  :root {
+    color-scheme: light dark;
+    --ink: #1a1a19;
+    --quiet: #5c5b58;
+    --line: #dcdad6;
+    --ground: #ffffff;
+    --panel: #f1f0ed;
+    --accent: #4e4a46;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8e6e2;
+      --quiet: #a19e98;
+      --line: #35332f;
+      --ground: #161615;
+      --panel: #22211f;
+      --accent: #d9d4cc;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 64px;
+    background: var(--ground);
+    color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  header { padding: 40px 0 8px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.2rem 0 .5rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .when { color: var(--quiet); margin: 0; font-size: .9rem; }
+  .lead {
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 20px 0 8px;
+  }
+  .lead p { margin: 0; }
+  nav.langs { margin: 18px 0 0; font-size: .95rem; }
+  nav.langs a { color: var(--accent); margin-right: 14px; }
+  .table { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; margin: .6rem 0 1rem; }
+  th, td {
+    border-bottom: 1px solid var(--line);
+    padding: .5rem .4rem;
+    text-align: left;
+    vertical-align: top;
+    font-size: .95rem;
+  }
+  th { color: var(--quiet); font-weight: 600; }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    color: var(--quiet);
+    font-size: .85rem;
+  }
+  hr.sep { border: 0; border-top: 1px solid var(--line); margin: 3.5rem 0 0; }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Tintora — Privacy Policy</h1>
+  <p class="when">Last updated: 29 September 2026</p>
+  <nav class="langs"><a href="#en">English</a><a href="#ru">Русский</a> <a href="../">About the app</a></nav>
+</header>
+
+<section id="en">
+
+<div class="lead">
+  <p><strong>Tintora collects no data and does not connect to the
+  internet.</strong> Your photos and the colours you measure stay on your
+  device, encrypted, and leave it only when you share something yourself.
+  There is no account, no advertising, no analytics and no server of ours.</p>
+</div>
+
+<p>Tintora identifies colours in photos and explains them for choosing
+colours for a room. This policy explains what the app stores, what it never
+does, and how to delete everything. It applies to Tintora for Android, iOS,
+macOS, Windows, Linux and the web version.</p>
+
+<h2>What the app stores on your device</h2>
+<p>All of it stays on the device. None of it is sent anywhere by the app.</p>
+<div class="table"><table>
+  <tr><th>What</th><th>Why</th><th>How it is protected</th></tr>
+  <tr><td>Photos you take or open in the app</td><td>So you can come back and measure more colours in them</td><td>Encrypted (AES-256-GCM)</td></tr>
+  <tr><td>Colours you measure, with a small preview of the measured area, their labels, and your session titles and notes</td><td>Your history</td><td>Encrypted database (SQLCipher)</td></tr>
+  <tr><td>Palette files you import</td><td>To match your colours against them</td><td>Encrypted database (SQLCipher)</td></tr>
+  <tr><td>Settings: language, theme, measuring options, which colour systems to show</td><td>To keep the app as you left it</td><td>The operating system's app-private storage</td></tr>
+</table></div>
+<p>The encryption keys are random, generated on the device, and kept in the
+operating system's secure key store (Android Keystore, Apple Keychain, Windows
+DPAPI, Linux Secret Service). Photos you take in the app are <strong>not</strong>
+saved to your photo gallery.</p>
+
+<h2>Backups</h2>
+<ul>
+  <li><strong>Android:</strong> the app's data is excluded from cloud backup and
+  from device-to-device transfer. Uninstalling the app or changing phones
+  therefore loses your history.</li>
+  <li><strong>iPhone, iPad and Mac:</strong> like other apps' data, Tintora's
+  encrypted files can be included in your own device backup (iCloud or a
+  computer), and restored from it. They go only to your own backup.</li>
+</ul>
+
+<h2>Network use</h2>
+<p><strong>The app makes no network requests.</strong> Every colour system and
+explanation ships inside the app. The Android app does not even hold the
+internet permission, and the macOS app has no network entitlement. There is
+no server of ours to send anything to.</p>
+
+<h2>Camera and photos</h2>
+<ul>
+  <li><strong>Camera:</strong> when you tap <em>Take photo</em>, the app asks the
+  system camera to take one. On iPhone and iPad this asks for camera
+  permission; on Android the system camera app is used and the app itself holds
+  no camera permission.</li>
+  <li><strong>Photo library:</strong> the app only reads the image you pick in
+  the system picker. It does not browse or read the rest of your library.</li>
+</ul>
+<p>Photos are used only to measure colours in them, on your device.</p>
+
+<h2>What leaves your device, and only when you say so</h2>
+<p>When you tap <em>Share</em>, the app makes text, a spreadsheet (CSV), a
+Tintora file (JSON) or an image card with the colours you chose — their
+values, your labels and session title, and their closest matches —
+<strong>never your photo</strong>. It hands that to your system's share
+sheet, saves it where you choose, or copies it to the clipboard. What
+happens next is up to you and the app you share with.</p>
+<p>Palettes you import can never be exported or shared from the app.</p>
+
+<h2>Advertising, analytics, purchases</h2>
+<p><strong>There are none.</strong> The app contains no advertising, no
+analytics or crash reporting, no advertising identifier, and no purchases.</p>
+
+<h2>Web version</h2>
+<p>A browser has no secure key store, so the web version keeps its history,
+photos and palettes <strong>unencrypted</strong> in the website's private
+storage in your browser (IndexedDB / Origin Private File System). It is still
+never sent anywhere. The app says so in Settings. Clearing the site's data in
+your browser deletes it.</p>
+
+<h2>Deleting your data</h2>
+<ul>
+  <li>Delete a single colour or session from its screen.</li>
+  <li><strong>Settings → Delete all history</strong> deletes all sessions,
+  photos, colours, imported palettes and the encryption keys.</li>
+  <li>Uninstalling the app deletes everything it stored on the device.</li>
+</ul>
+<p>We hold no data about you, so there is nothing for us to delete, export or
+correct on request — but you are welcome to ask.</p>
+
+<h2>Children</h2>
+<p>The app is suitable for all ages and collects no data from anyone,
+including children.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version appears on this page with a new
+date at the top. A change that introduced any data collection would be
+announced in the app before it took effect.</p>
+
+<h2>Contact</h2>
+<p>Artsiom Maldavanau —
+<a href="mailto:amaldavanau@gmail.com">amaldavanau@gmail.com</a>.</p>
+
+</section>
+
+<hr class="sep">
+
+<section id="ru" lang="ru">
+
+<header>
+  <h1>Tintora — Политика конфиденциальности</h1>
+  <p class="when">Обновлено: 29 сентября 2026 года</p>
+</header>
+
+<div class="lead">
+  <p><strong>Tintora не собирает никаких данных и не подключается к
+  интернету.</strong> Ваши фото и измеренные цвета хранятся на устройстве в
+  зашифрованном виде и покидают его, только если вы сами чем-то поделитесь.
+  Нет учётных записей, рекламы, аналитики и наших серверов.</p>
+</div>
+
+<p>Tintora определяет цвета на фотографиях и объясняет их, чтобы помочь
+выбрать цвета для интерьера. Здесь описано, что приложение хранит, чего оно
+никогда не делает и как всё удалить. Политика относится к Tintora для
+Android, iOS, macOS, Windows, Linux и к веб-версии.</p>
+
+<h2>Что приложение хранит на устройстве</h2>
+<p>Всё это остаётся на устройстве. Приложение ничего никуда не отправляет.</p>
+<div class="table"><table>
+  <tr><th>Что</th><th>Зачем</th><th>Как защищено</th></tr>
+  <tr><td>Фото, которые вы сняли или открыли в приложении</td><td>Чтобы вернуться к ним и измерить другие цвета</td><td>Шифрование (AES-256-GCM)</td></tr>
+  <tr><td>Измеренные цвета с небольшим фрагментом измеренной области, их метки, названия сеансов и заметки</td><td>Ваша история</td><td>Зашифрованная база данных (SQLCipher)</td></tr>
+  <tr><td>Импортированные файлы палитр</td><td>Чтобы сравнивать с ними ваши цвета</td><td>Зашифрованная база данных (SQLCipher)</td></tr>
+  <tr><td>Настройки: язык, тема, параметры измерения, какие цветовые системы показывать</td><td>Чтобы приложение оставалось таким, как вы его настроили</td><td>Закрытое хранилище приложения в системе</td></tr>
+</table></div>
+<p>Ключи шифрования случайные, создаются на устройстве и хранятся в защищённом
+хранилище ключей системы (Android Keystore, Apple Keychain, Windows DPAPI,
+Linux Secret Service). Снимки, сделанные в приложении, <strong>не</strong>
+сохраняются в галерею.</p>
+
+<h2>Резервные копии</h2>
+<ul>
+  <li><strong>Android:</strong> данные приложения исключены из облачных
+  резервных копий и из переноса на другое устройство. Поэтому при удалении
+  приложения или смене телефона история теряется.</li>
+  <li><strong>iPhone, iPad и Mac:</strong> как и данные других приложений,
+  зашифрованные файлы Tintora могут попасть в вашу собственную резервную копию
+  устройства (iCloud или компьютер) и восстановиться из неё. Они попадают
+  только в вашу копию.</li>
+</ul>
+
+<h2>Работа с сетью</h2>
+<p><strong>Приложение не выполняет сетевых запросов.</strong> Все цветовые
+системы и пояснения входят в само приложение. У приложения для Android нет
+даже разрешения на доступ в интернет, у приложения для macOS нет сетевых прав.
+Наших серверов, куда можно было бы что-то отправить, не существует.</p>
+
+<h2>Камера и фотографии</h2>
+<ul>
+  <li><strong>Камера:</strong> когда вы нажимаете <em>Сделать фото</em>,
+  приложение просит системную камеру сделать снимок. На iPhone и iPad при этом
+  запрашивается доступ к камере; на Android используется системное приложение
+  камеры, а у самого приложения разрешения на камеру нет.</li>
+  <li><strong>Фотографии:</strong> приложение читает только то изображение,
+  которое вы выбрали в системном окне выбора. Остальную галерею оно не
+  просматривает и не читает.</li>
+</ul>
+<p>Фотографии используются только для измерения цветов на вашем устройстве.</p>
+
+<h2>Что покидает устройство — только по вашему решению</h2>
+<p>Когда вы нажимаете <em>Поделиться</em>, приложение создаёт текст, таблицу
+(CSV), файл Tintora (JSON) или карточку-изображение с выбранными цветами — их
+значениями, вашими метками, названием сеанса и ближайшими совпадениями —
+<strong>но никогда не с вашим фото</strong>. Результат передаётся в системное
+меню «Поделиться», сохраняется туда, куда вы укажете, или копируется в буфер
+обмена. Что происходит дальше, решаете вы и приложение, с которым вы
+делитесь.</p>
+<p>Импортированными палитрами нельзя поделиться, и их нельзя экспортировать
+из приложения.</p>
+
+<h2>Реклама, аналитика, покупки</h2>
+<p><strong>Их нет.</strong> В приложении нет рекламы, аналитики и отчётов о
+сбоях, рекламного идентификатора и покупок.</p>
+
+<h2>Веб-версия</h2>
+<p>В браузере нет защищённого хранилища ключей, поэтому веб-версия хранит
+историю, фото и палитры <strong>без шифрования</strong> в закрытом хранилище
+сайта в вашем браузере (IndexedDB / Origin Private File System). Они всё равно
+никуда не отправляются. Приложение сообщает об этом в настройках. Очистка
+данных сайта в браузере удаляет их.</p>
+
+<h2>Удаление данных</h2>
+<ul>
+  <li>Отдельный цвет или сеанс удаляется на его экране.</li>
+  <li><strong>Настройки → Удалить всю историю</strong> удаляет все сеансы,
+  фото, цвета, импортированные палитры и ключи шифрования.</li>
+  <li>Удаление приложения стирает всё, что оно хранило на устройстве.</li>
+</ul>
+<p>У нас нет никаких данных о вас, поэтому нам нечего удалять, выгружать или
+исправлять по запросу — но вы всегда можете написать.</p>
+
+<h2>Дети</h2>
+<p>Приложение подходит для любого возраста и ни у кого, включая детей, не
+собирает данных.</p>
+
+<h2>Изменения</h2>
+<p>Если политика изменится, новая версия появится на этой странице с новой
+датой вверху. Об изменении, которое добавило бы сбор каких-либо данных, будет
+сообщено в приложении заранее.</p>
+
+<h2>Контакты</h2>
+<p>Artsiom Maldavanau —
+<a href="mailto:amaldavanau@gmail.com">amaldavanau@gmail.com</a>.</p>
+
+</section>
+
+<footer>
+  Tintora — <a href="../">about the app</a>.
+</footer>
+
+</main>
+</body>
+</html>
