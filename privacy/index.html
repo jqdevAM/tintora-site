@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tintora — Privacy Policy</title>
-<meta name="description" content="Tintora privacy policy: the app collects no data and does not connect to the internet; photos and colours stay on your device, encrypted.">
+<meta name="description" content="Tintora privacy policy: photos and colours stay on your device, encrypted, and are never sent anywhere; the Android app shows Yandex banner ads, which use the internet and the advertising ID.">
 <link rel="icon" href="../tintora.png">
 <style>
   :root {
@@ -86,10 +86,13 @@
 <section id="en">
 
 <div class="lead">
-  <p><strong>Tintora collects no data and does not connect to the
-  internet.</strong> Your photos and the colours you measure stay on your
-  device, encrypted, and leave it only when you share something yourself.
-  There is no account, no advertising, no analytics and no server of ours.</p>
+  <p><strong>Your photos and the colours you measure stay on your device,
+  encrypted, and leave it only when you share something yourself.</strong>
+  The app's own code makes no network requests, and there is no account and
+  no server of ours. <strong>The Android app shows banner ads</strong> from the
+  Yandex Advertising Network; the ad software uses the internet and, if you
+  allow it, your device's advertising ID — see <a href="#en-ads">Advertising</a>.
+  The web, iPhone, iPad and desktop versions have no ads.</p>
 </div>
 
 <p>Tintora identifies colours in photos and explains them for choosing
@@ -104,7 +107,7 @@ macOS, Windows, Linux and the web version.</p>
   <tr><td>Photos you take or open in the app</td><td>So you can come back and measure more colours in them</td><td>Encrypted (AES-256-GCM)</td></tr>
   <tr><td>Colours you measure, with a small preview of the measured area, their labels, and your session titles and notes</td><td>Your history</td><td>Encrypted database (SQLCipher)</td></tr>
   <tr><td>Palette files you import</td><td>To match your colours against them</td><td>Encrypted database (SQLCipher)</td></tr>
-  <tr><td>Settings: language, theme, measuring options, which colour systems to show</td><td>To keep the app as you left it</td><td>The operating system's app-private storage</td></tr>
+  <tr><td>Settings: language, theme, measuring options, which colour systems to show, and your answer about the advertising ID (Android)</td><td>To keep the app as you left it</td><td>The operating system's app-private storage</td></tr>
 </table></div>
 <p>The encryption keys are random, generated on the device, and kept in the
 operating system's secure key store (Android Keystore, Apple Keychain, Windows
@@ -122,10 +125,13 @@ saved to your photo gallery.</p>
 </ul>
 
 <h2>Network use</h2>
-<p><strong>The app makes no network requests.</strong> Every colour system and
-explanation ships inside the app. The Android app does not even hold the
-internet permission, and the macOS app has no network entitlement. There is
-no server of ours to send anything to.</p>
+<p><strong>The app's own code makes no network requests.</strong> Every colour
+system and explanation ships inside the app, and colour matching works with
+no connection. There is no server of ours to send anything to. On Android the
+app holds the internet permission <strong>for the advertising SDK
+only</strong>, which is the one part of the app that talks to the internet
+(see <a href="#en-ads">Advertising</a>). The other versions show no ads, and
+the macOS app has no network entitlement.</p>
 
 <h2>Camera and photos</h2>
 <ul>
@@ -147,9 +153,54 @@ sheet, saves it where you choose, or copies it to the clipboard. What
 happens next is up to you and the app you share with.</p>
 <p>Palettes you import can never be exported or shared from the app.</p>
 
-<h2>Advertising, analytics, purchases</h2>
-<p><strong>There are none.</strong> The app contains no advertising, no
-analytics or crash reporting, no advertising identifier, and no purchases.</p>
+<h2 id="en-ads">Advertising</h2>
+
+<p><strong>The app is free, and on Android advertising is how it is paid
+for.</strong> Banner ads appear in exactly two places — at the bottom of the
+colour library and at the bottom of the history list — and never over a
+photo, the colour picker, the camera or a colour's explanation, where they
+would cover what you are measuring. The web, iPhone, iPad and desktop
+versions show no ads.</p>
+
+<p>The ads are served by the <strong>Yandex Mobile Ads SDK</strong>, which is
+part of the Android app. To do that it uses your device's <strong>advertising
+ID</strong> and information about the device and its connection, and it sends
+those to Yandex's servers. That collection is Yandex's, made under
+<a href="https://yandex.com/legal/confidential/">Yandex's privacy policy</a>
+rather than ours, and it is the reason the app declares the
+<code>AD_ID</code> permission and the Play install-referrer permission. The
+SDK also brings Yandex's analytics library (AppMetrica) with it as a
+dependency; the app itself starts no analytics and reports nothing about how
+you use it. Location tracking in the SDK is switched off.</p>
+
+<p><strong>What is never sent to an ad network, or anywhere else:</strong>
+your photos, the colours you measure, your sessions, labels and notes, and
+the palettes you import. The app's own code has no way of reaching the
+network, which is checked automatically every time the app is built.</p>
+
+<p><strong>You are asked first.</strong> Before the first ad, the app asks
+whether your advertising ID may be used to choose ads. If you allow it, ads
+are personalised with it. If you decline, the app stays free and still shows
+ads — they are simply not chosen that way. You can change the answer at any
+time in <strong>Settings → Advertising → Use my advertising ID</strong>.</p>
+
+<p>You can also reset or delete your advertising ID at any time in Android's
+own settings, under Privacy → Ads. Colour matching keeps working with no
+network and no ads.</p>
+
+<h2>Analytics, purchases</h2>
+<p><strong>There are none of our own.</strong> The app runs no analytics or
+crash reporting of its own and has no purchases.</p>
+
+<h2>Permissions on Android, and what each is for</h2>
+<div class="table"><table>
+  <tr><th>Permission</th><th>What it is for</th></tr>
+  <tr><td>Internet and network state</td><td>Used only by the advertising SDK to load ads. The app's own code does not use them.</td></tr>
+  <tr><td>Advertising ID (<code>AD_ID</code>)</td><td>Declared by the advertising SDK so ads can be selected and counted. Reset or delete the ID in Android's settings at any time.</td></tr>
+  <tr><td>Play install referrer</td><td>Declared by a library the advertising SDK depends on. It reads which campaign an install came from.</td></tr>
+</table></div>
+<p>The app holds no camera, storage or location permission: photos are taken
+with the system camera and chosen with the system photo picker.</p>
 
 <h2>Web version</h2>
 <p>A browser has no secure key store, so the web version keeps its history,
@@ -166,16 +217,20 @@ your browser deletes it.</p>
   <li>Uninstalling the app deletes everything it stored on the device.</li>
 </ul>
 <p>We hold no data about you, so there is nothing for us to delete, export or
-correct on request — but you are welcome to ask.</p>
+correct on request — but you are welcome to ask. The advertising ID belongs
+to Android's settings and is reset or deleted there; data the ad SDK sent to
+Yandex is covered by
+<a href="https://yandex.com/legal/confidential/">Yandex's privacy policy</a>.</p>
 
 <h2>Children</h2>
-<p>The app is suitable for all ages and collects no data from anyone,
-including children.</p>
+<p>The app is not directed at children. Nothing of the app's own is
+collected from anyone; the advertising SDK on Android works as described
+under <a href="#en-ads">Advertising</a>.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the new version appears on this page with a new
-date at the top. A change that introduced any data collection would be
-announced in the app before it took effect.</p>
+date at the top. A change that introduced any further data collection would
+be announced in the app before it took effect.</p>
 
 <h2>Contact</h2>
 <p>Artsiom Maldavanau —
@@ -193,10 +248,14 @@ announced in the app before it took effect.</p>
 </header>
 
 <div class="lead">
-  <p><strong>Tintora не собирает никаких данных и не подключается к
-  интернету.</strong> Ваши фото и измеренные цвета хранятся на устройстве в
-  зашифрованном виде и покидают его, только если вы сами чем-то поделитесь.
-  Нет учётных записей, рекламы, аналитики и наших серверов.</p>
+  <p><strong>Ваши фото и измеренные цвета хранятся на устройстве в
+  зашифрованном виде и покидают его, только если вы сами чем-то
+  поделитесь.</strong> Собственный код приложения не выполняет сетевых
+  запросов; нет учётных записей и наших серверов. <strong>Приложение для
+  Android показывает рекламные баннеры</strong> Рекламной сети Яндекса;
+  рекламный модуль пользуется интернетом и, если вы разрешите, рекламным
+  идентификатором устройства — см. раздел <a href="#ru-ads">«Реклама»</a>.
+  В веб-версии, на iPhone, iPad и компьютере рекламы нет.</p>
 </div>
 
 <p>Tintora определяет цвета на фотографиях и объясняет их, чтобы помочь
@@ -211,7 +270,7 @@ Android, iOS, macOS, Windows, Linux и к веб-версии.</p>
   <tr><td>Фото, которые вы сняли или открыли в приложении</td><td>Чтобы вернуться к ним и измерить другие цвета</td><td>Шифрование (AES-256-GCM)</td></tr>
   <tr><td>Измеренные цвета с небольшим фрагментом измеренной области, их метки, названия сеансов и заметки</td><td>Ваша история</td><td>Зашифрованная база данных (SQLCipher)</td></tr>
   <tr><td>Импортированные файлы палитр</td><td>Чтобы сравнивать с ними ваши цвета</td><td>Зашифрованная база данных (SQLCipher)</td></tr>
-  <tr><td>Настройки: язык, тема, параметры измерения, какие цветовые системы показывать</td><td>Чтобы приложение оставалось таким, как вы его настроили</td><td>Закрытое хранилище приложения в системе</td></tr>
+  <tr><td>Настройки: язык, тема, параметры измерения, какие цветовые системы показывать, ваш ответ про рекламный идентификатор (Android)</td><td>Чтобы приложение оставалось таким, как вы его настроили</td><td>Закрытое хранилище приложения в системе</td></tr>
 </table></div>
 <p>Ключи шифрования случайные, создаются на устройстве и хранятся в защищённом
 хранилище ключей системы (Android Keystore, Apple Keychain, Windows DPAPI,
@@ -230,10 +289,14 @@ Linux Secret Service). Снимки, сделанные в приложении,
 </ul>
 
 <h2>Работа с сетью</h2>
-<p><strong>Приложение не выполняет сетевых запросов.</strong> Все цветовые
-системы и пояснения входят в само приложение. У приложения для Android нет
-даже разрешения на доступ в интернет, у приложения для macOS нет сетевых прав.
-Наших серверов, куда можно было бы что-то отправить, не существует.</p>
+<p><strong>Собственный код приложения не выполняет сетевых запросов.</strong>
+Все цветовые системы и пояснения входят в само приложение, и подбор цвета
+работает без подключения. Наших серверов, куда можно было бы что-то
+отправить, не существует. На Android у приложения есть разрешение на доступ в
+интернет <strong>только ради рекламного SDK</strong> — это единственная часть
+приложения, которая обращается к интернету (см. <a href="#ru-ads">«Реклама»</a>).
+Остальные версии рекламы не показывают, у приложения для macOS нет сетевых
+прав.</p>
 
 <h2>Камера и фотографии</h2>
 <ul>
@@ -258,9 +321,56 @@ Linux Secret Service). Снимки, сделанные в приложении,
 <p>Импортированными палитрами нельзя поделиться, и их нельзя экспортировать
 из приложения.</p>
 
-<h2>Реклама, аналитика, покупки</h2>
-<p><strong>Их нет.</strong> В приложении нет рекламы, аналитики и отчётов о
-сбоях, рекламного идентификатора и покупок.</p>
+<h2 id="ru-ads">Реклама</h2>
+
+<p><strong>Приложение бесплатное, и на Android его оплачивает
+реклама.</strong> Баннеры появляются ровно в двух местах — внизу библиотеки
+цветов и внизу списка истории — и никогда поверх фото, пипетки, камеры или
+объяснения цвета, где они закрывали бы то, что вы измеряете. В веб-версии, на
+iPhone, iPad и компьютере рекламы нет.</p>
+
+<p>Рекламу показывает <strong>Yandex Mobile Ads SDK</strong>, входящий в
+приложение для Android. Для этого он использует <strong>рекламный
+идентификатор</strong> вашего устройства и сведения об устройстве и
+соединении и передаёт их на серверы Яндекса. Этот сбор ведёт Яндекс по
+<a href="https://yandex.com/legal/confidential/">своей политике
+конфиденциальности</a>, а не мы; именно поэтому приложение объявляет
+разрешение <code>AD_ID</code> и разрешение Google Play на источник установки.
+Вместе с SDK в приложение попадает и библиотека аналитики Яндекса
+(AppMetrica) — само приложение никакую аналитику не запускает и о том, как вы
+им пользуетесь, ничего не сообщает. Отслеживание местоположения в SDK
+выключено.</p>
+
+<p><strong>Что не уходит ни в рекламную сеть, ни куда-либо ещё:</strong> ваши
+фото, измеренные цвета, сеансы, метки и заметки, импортированные палитры.
+Собственный код приложения вообще не имеет доступа к сети, и это проверяется
+автоматически при каждой сборке.</p>
+
+<p><strong>Сначала спрашиваем.</strong> Перед первой рекламой приложение
+спрашивает, можно ли использовать ваш рекламный идентификатор для её подбора.
+Если разрешить, реклама подбирается персонально. Если отказать, приложение
+останется бесплатным и реклама никуда не денется — её просто будут подбирать
+иначе. Ответ можно изменить в любой момент: <strong>«Настройки» → «Реклама» →
+«Использовать рекламный идентификатор»</strong>.</p>
+
+<p>Сам рекламный идентификатор можно в любой момент сбросить или удалить в
+настройках Android: «Конфиденциальность» → «Реклама». Подбор цвета продолжает
+работать без сети и без рекламы.</p>
+
+<h2>Аналитика, покупки</h2>
+<p><strong>Собственных нет.</strong> Приложение не ведёт своей аналитики и
+отчётов о сбоях, покупок в нём нет.</p>
+
+<h2>Разрешения на Android и зачем они</h2>
+<div class="table"><table>
+  <tr><th>Разрешение</th><th>Зачем</th></tr>
+  <tr><td>Интернет и состояние сети</td><td>Используются только рекламным SDK для загрузки рекламы. Собственный код приложения ими не пользуется.</td></tr>
+  <tr><td>Рекламный идентификатор (<code>AD_ID</code>)</td><td>Объявлен рекламным SDK, чтобы подбирать и учитывать рекламу. Идентификатор можно в любой момент сбросить или удалить в настройках Android.</td></tr>
+  <tr><td>Источник установки Google Play</td><td>Объявлен библиотекой, от которой зависит рекламный SDK. Он сообщает, из какой кампании пришла установка.</td></tr>
+</table></div>
+<p>Разрешений на камеру, хранилище и местоположение у приложения нет: снимки
+делает системная камера, изображения выбираются в системном окне выбора
+фото.</p>
 
 <h2>Веб-версия</h2>
 <p>В браузере нет защищённого хранилища ключей, поэтому веб-версия хранит
@@ -277,16 +387,21 @@ Linux Secret Service). Снимки, сделанные в приложении,
   <li>Удаление приложения стирает всё, что оно хранило на устройстве.</li>
 </ul>
 <p>У нас нет никаких данных о вас, поэтому нам нечего удалять, выгружать или
-исправлять по запросу — но вы всегда можете написать.</p>
+исправлять по запросу — но вы всегда можете написать. Рекламный
+идентификатор живёт в настройках Android и сбрасывается или удаляется там;
+данные, переданные рекламным SDK Яндексу, регулируются
+<a href="https://yandex.com/legal/confidential/">политикой конфиденциальности
+Яндекса</a>.</p>
 
 <h2>Дети</h2>
-<p>Приложение подходит для любого возраста и ни у кого, включая детей, не
-собирает данных.</p>
+<p>Приложение не предназначено для детей. Само приложение ни у кого не
+собирает данных; рекламный SDK на Android работает так, как описано в разделе
+<a href="#ru-ads">«Реклама»</a>.</p>
 
 <h2>Изменения</h2>
 <p>Если политика изменится, новая версия появится на этой странице с новой
-датой вверху. Об изменении, которое добавило бы сбор каких-либо данных, будет
-сообщено в приложении заранее.</p>
+датой вверху. Об изменении, которое добавило бы какой-либо другой сбор
+данных, будет сообщено в приложении заранее.</p>
 
 <h2>Контакты</h2>
 <p>Artsiom Maldavanau —
