@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tintora</title>
+<meta name="description" content="Tintora — identify any colour from a photo, offline. Explains it in digital and paint colour systems for choosing colours for a room, and keeps everything on your device.">
+<link rel="icon" href="tintora.png">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f4f4f2;
+    --panel: #ffffff;
+    --ink: #1a1a19;
+    --muted: #5c5b58;
+    --line: #dcdad6;
+    --accent: #4e4a46;
+    --accent-ink: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161615;
+      --panel: #1f1f1d;
+      --ink: #e8e6e2;
+      --muted: #a19e98;
+      --line: #35332f;
+      --accent: #d9d4cc;
+      --accent-ink: #1a1a19;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 16px 64px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 36rem; margin: 0 auto; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  header img {
+    width: 64px; height: 64px; border-radius: 14px; display: block;
+    box-shadow: 0 2px 10px rgb(0 0 0 / .18);
+  }
+  h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 2px; letter-spacing: -.02em; }
+  .tagline { color: var(--muted); margin: 0; }
+  h2 {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--muted); margin: 32px 0 10px; font-weight: 600;
+  }
+  p { margin: 0 0 14px; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 14px; padding: 18px 20px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li { padding: 9px 0; border-top: 1px solid var(--line); }
+  ul li:first-child { border-top: 0; padding-top: 0; }
+  ul li:last-child { padding-bottom: 0; }
+  ul strong { display: block; font-weight: 600; }
+  ul span { color: var(--muted); font-size: .94rem; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .links a {
+    display: inline-block; padding: 9px 16px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--panel);
+    text-decoration: none; font-weight: 500;
+  }
+  .links a.primary {
+    background: var(--accent); border-color: var(--accent); color: var(--accent-ink);
+  }
+  footer {
+    margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <img src="tintora.png" alt="" width="64" height="64">
+    <div>
+      <h1>Tintora</h1>
+      <p class="tagline">Identify any colour from a photo, offline.</p>
+    </div>
+  </header>
+
+  <p>Take a photo of a wall, a sofa or a tile, or open one you already have,
+  and touch the colour you want. Tintora tells you what it is — in the codes
+  designers and paint shops use — and what it means for a room.</p>
+
+  <h2>What it does</h2>
+  <div class="panel">
+    <ul>
+      <li>
+        <strong>Measures the colour you touch</strong>
+        <span>A magnifier to hit the exact spot, an area rather than a single
+        noisy pixel, and a white-reference correction for the colour of the
+        light in the room.</span>
+      </li>
+      <li>
+        <strong>Explains it in every system it knows</strong>
+        <span>HEX, RGB, CMYK, Lab, OKLCH and more; the nearest named colours;
+        a Munsell notation a paint shop can mix from; and the nearest Federal
+        Standard 595 paint — each with how close the match really is.</span>
+      </li>
+      <li>
+        <strong>Says what it will do in a room</strong>
+        <span>How much light it reflects, whether it reads warm or cool, its
+        undertone, what it goes with, and colours that harmonise with it.</span>
+      </li>
+      <li>
+        <strong>Keeps your colours</strong>
+        <span>Every photo becomes a session you can come back to, search,
+        label and share as text, a spreadsheet or an image card.</span>
+      </li>
+      <li>
+        <strong>Uses the palettes you already have</strong>
+        <span>Import a colour library you own (ASE, ACO, GPL or CSV) and
+        Tintora matches against it too — on your device only.</span>
+      </li>
+    </ul>
+  </div>
+
+  <h2>What it does not do</h2>
+  <div class="panel">
+    <p>No account, no advertising, no analytics and no server of ours. The app
+    does not connect to the internet at all: every colour it knows ships inside
+    it, and your photos and colours stay on your device, encrypted, unless you
+    share something yourself.</p>
+    <div class="links">
+      <a class="primary" href="privacy/">Privacy policy</a>
+      <a href="privacy/#ru">По-русски</a>
+    </div>
+  </div>
+
+  <h2>Languages</h2>
+  <p>English, Deutsch, Français, Italiano, Русский.</p>
+
+  <footer>
+    Contact: <a href="mailto:amaldavanau@gmail.com">amaldavanau@gmail.com</a>
+  </footer>
+
+</main>
+</body>
+</html>
