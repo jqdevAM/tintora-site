@@ -1,6 +1,6 @@
 # tintora-site
 
-The public pages for the Tintora app.
+The public pages for the Kulora app.
 
 | Page | URL |
 |---|---|
