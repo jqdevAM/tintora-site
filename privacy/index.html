@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kulora — Privacy Policy</title>
-<meta name="description" content="Kulora privacy policy: photos and colours stay on your device, encrypted, and are never sent anywhere; the Android app shows Yandex banner ads, which use the internet and the advertising ID.">
+<meta name="description" content="Kulora privacy policy: photos and colours stay on your device, encrypted, and are never sent anywhere; the Android app shows banner ads from Start.io, which use the internet and the advertising ID.">
 <link rel="icon" href="../tintora.png">
 <style>
   :root {
@@ -79,7 +79,7 @@
 
 <header>
   <h1>Kulora — Privacy Policy</h1>
-  <p class="when">Last updated: 29 September 2026</p>
+  <p class="when">Last updated: 12 October 2026</p>
   <nav class="langs"><a href="#en">English</a><a href="#ru">Русский</a> <a href="../">About the app</a></nav>
 </header>
 
@@ -89,9 +89,9 @@
   <p><strong>Your photos and the colours you measure stay on your device,
   encrypted, and leave it only when you share something yourself.</strong>
   The app's own code makes no network requests, and there is no account and
-  no server of ours. <strong>The Android app shows banner ads</strong> from the
-  Yandex Advertising Network; the ad software uses the internet and, if you
-  allow it, your device's advertising ID — see <a href="#en-ads">Advertising</a>.
+  no server of ours. <strong>The Android app shows banner ads</strong> from
+  Start.io; the ad software uses the internet and, if you allow it, your
+  device's advertising ID — see <a href="#en-ads">Advertising</a>.
   The web, iPhone, iPad and desktop versions have no ads.</p>
 </div>
 
@@ -159,19 +159,34 @@ happens next is up to you and the app you share with.</p>
 for.</strong> Banner ads appear in exactly two places — at the bottom of the
 colour library and at the bottom of the history list — and never over a
 photo, the colour picker, the camera or a colour's explanation, where they
-would cover what you are measuring. The web, iPhone, iPad and desktop
-versions show no ads.</p>
+would cover what you are measuring. There are no full-screen ads: the ad
+software's own ad at launch and its ad on returning to the app are both
+switched off. The web, iPhone, iPad and desktop versions show no ads.</p>
 
-<p>The ads are served by the <strong>Yandex Mobile Ads SDK</strong>, which is
-part of the Android app. To do that it uses your device's <strong>advertising
-ID</strong> and information about the device and its connection, and it sends
-those to Yandex's servers. That collection is Yandex's, made under
-<a href="https://yandex.com/legal/confidential/">Yandex's privacy policy</a>
-rather than ours, and it is the reason the app declares the
-<code>AD_ID</code> permission and the Play install-referrer permission. The
-SDK also brings Yandex's analytics library (AppMetrica) with it as a
-dependency; the app itself starts no analytics and reports nothing about how
-you use it. Location tracking in the SDK is switched off.</p>
+<p>The ads are served by the <strong>Start.io SDK</strong>, which is part of
+the Android app. To do that it uses your device's <strong>advertising
+ID</strong> and information about the device and its network connection,
+such as your IP address, and it sends those to Start.io's servers.
+Start.io's own policy also lists the names of paired Bluetooth devices,
+device sensors, and a check of whether particular apps are installed on the
+phone. That collection is Start.io's, made under
+<a href="https://www.start.io/policy/privacy-policy/">Start.io's privacy
+policy</a> rather than ours, and it is the reason the app declares the
+permissions listed below. Kulora itself uses no Bluetooth, does not look at
+your other apps and gives the SDK none of this; the SDK reads it from the
+phone on its own account.</p>
+
+<p>Versions of the app built for the <strong>Yandex Advertising
+Network</strong> instead show the same two banners through the Yandex Mobile
+Ads SDK. It uses the advertising ID and information about the device and its
+connection, under <a href="https://yandex.com/legal/confidential/">Yandex's
+privacy policy</a>, and brings Yandex's analytics library (AppMetrica) with it
+as a dependency; its location tracking is switched off. Both SDKs are part of
+every Android build, but only one is ever used, and the <em>Details</em> link
+on the question below opens the policy of the one in your app.</p>
+
+<p>The app itself starts no analytics and reports nothing about how you use
+it.</p>
 
 <p><strong>What is never sent to an ad network, or anywhere else:</strong>
 your photos, the colours you measure, your sessions, labels and notes, and
@@ -179,10 +194,19 @@ the palettes you import. The app's own code has no way of reaching the
 network, which is checked automatically every time the app is built.</p>
 
 <p><strong>You are asked first.</strong> Before the first ad, the app asks
-whether your advertising ID may be used to choose ads. If you allow it, ads
-are personalised with it. If you decline, the app stays free and still shows
-ads — they are simply not chosen that way. You can change the answer at any
-time in <strong>Settings → Advertising → Use my advertising ID</strong>.</p>
+whether your advertising ID may be used to choose ads, and asks for no ad
+until you answer. If you allow it, ads are personalised
+with it. If you decline, the app stays free and still shows ads — they are
+simply chosen without your advertising ID, and the ad network is told so
+before any ad is requested. You can change the answer at any time in
+<strong>Settings → Advertising → Use my advertising ID</strong>, and the
+change takes effect immediately.</p>
+
+<p>If the app cannot tell the ad network about your refusal — which should
+not happen, but is not something it will guess about — it shows no ads at
+all rather than asking anyway. The ad slots stay empty and the app stays
+free. The question you are asked, and the line under the switch in Settings,
+say which of the two it will be.</p>
 
 <p>You can also reset or delete your advertising ID at any time in Android's
 own settings, under Privacy → Ads. Colour matching keeps working with no
@@ -197,7 +221,10 @@ crash reporting of its own and has no purchases.</p>
   <tr><th>Permission</th><th>What it is for</th></tr>
   <tr><td>Internet and network state</td><td>Used only by the advertising SDK to load ads. The app's own code does not use them.</td></tr>
   <tr><td>Advertising ID (<code>AD_ID</code>)</td><td>Declared by the advertising SDK so ads can be selected and counted. Reset or delete the ID in Android's settings at any time.</td></tr>
-  <tr><td>Play install referrer</td><td>Declared by a library the advertising SDK depends on. It reads which campaign an install came from.</td></tr>
+  <tr><td>Play install referrer</td><td>Declared by the advertising SDK and a library it depends on. It reads which campaign an install came from.</td></tr>
+  <tr><td>Advertising topics (<code>ACCESS_ADSERVICES_TOPICS</code>)</td><td>Declared by the Start.io SDK. It lets the SDK read the coarse interest topics Android itself works out from how you use your phone. Nothing in Kulora reads them.</td></tr>
+  <tr><td>Wi-Fi state (<code>ACCESS_WIFI_STATE</code>)</td><td>Declared by the Start.io SDK, which reads what kind of connection the phone has. Kulora itself does not use it.</td></tr>
+  <tr><td>Start at boot (<code>RECEIVE_BOOT_COMPLETED</code>)</td><td>Declared by the Start.io SDK, which refreshes its own settings after the phone restarts. <strong>Kulora itself does nothing at boot</strong>: it opens no screen, shows no notification and makes no request of its own.</td></tr>
 </table></div>
 <p>The app holds no camera, storage or location permission: photos are taken
 with the system camera and chosen with the system photo picker.</p>
@@ -219,8 +246,11 @@ your browser deletes it.</p>
 <p>We hold no data about you, so there is nothing for us to delete, export or
 correct on request — but you are welcome to ask. The advertising ID belongs
 to Android's settings and is reset or deleted there; data the ad SDK sent to
-Yandex is covered by
-<a href="https://yandex.com/legal/confidential/">Yandex's privacy policy</a>.</p>
+Start.io is covered by
+<a href="https://www.start.io/policy/privacy-policy/">Start.io's privacy
+policy</a> (in a version built for Yandex,
+<a href="https://yandex.com/legal/confidential/">Yandex's privacy
+policy</a>).</p>
 
 <h2>Children</h2>
 <p>The app is not directed at children. Nothing of the app's own is
@@ -244,7 +274,7 @@ be announced in the app before it took effect.</p>
 
 <header>
   <h1>Kulora — Политика конфиденциальности</h1>
-  <p class="when">Обновлено: 29 сентября 2026 года</p>
+  <p class="when">Обновлено: 12 октября 2026 года</p>
 </header>
 
 <div class="lead">
@@ -252,7 +282,7 @@ be announced in the app before it took effect.</p>
   зашифрованном виде и покидают его, только если вы сами чем-то
   поделитесь.</strong> Собственный код приложения не выполняет сетевых
   запросов; нет учётных записей и наших серверов. <strong>Приложение для
-  Android показывает рекламные баннеры</strong> Рекламной сети Яндекса;
+  Android показывает рекламные баннеры</strong> сети Start.io;
   рекламный модуль пользуется интернетом и, если вы разрешите, рекламным
   идентификатором устройства — см. раздел <a href="#ru-ads">«Реклама»</a>.
   В веб-версии, на iPhone, iPad и компьютере рекламы нет.</p>
@@ -326,20 +356,36 @@ Linux Secret Service). Снимки, сделанные в приложении,
 <p><strong>Приложение бесплатное, и на Android его оплачивает
 реклама.</strong> Баннеры появляются ровно в двух местах — внизу библиотеки
 цветов и внизу списка истории — и никогда поверх фото, пипетки, камеры или
-объяснения цвета, где они закрывали бы то, что вы измеряете. В веб-версии, на
-iPhone, iPad и компьютере рекламы нет.</p>
+объяснения цвета, где они закрывали бы то, что вы измеряете. Полноэкранной
+рекламы нет: собственная реклама рекламного модуля при запуске и при
+возвращении в приложение выключена. В веб-версии, на iPhone, iPad и
+компьютере рекламы нет.</p>
 
-<p>Рекламу показывает <strong>Yandex Mobile Ads SDK</strong>, входящий в
-приложение для Android. Для этого он использует <strong>рекламный
-идентификатор</strong> вашего устройства и сведения об устройстве и
-соединении и передаёт их на серверы Яндекса. Этот сбор ведёт Яндекс по
-<a href="https://yandex.com/legal/confidential/">своей политике
+<p>Рекламу показывает <strong>Start.io SDK</strong>, входящий в приложение
+для Android. Для этого он использует <strong>рекламный
+идентификатор</strong> вашего устройства и сведения об устройстве и сетевом
+соединении, например IP-адрес, и передаёт их на серверы Start.io. В своей
+политике Start.io перечисляет также имена сопряжённых Bluetooth-устройств,
+датчики устройства и проверку того, установлены ли на телефоне те или иные
+приложения. Этот сбор ведёт Start.io на своих условиях, изложенных в её
+<a href="https://www.start.io/policy/privacy-policy/">политике
 конфиденциальности</a>, а не мы; именно поэтому приложение объявляет
-разрешение <code>AD_ID</code> и разрешение Google Play на источник установки.
-Вместе с SDK в приложение попадает и библиотека аналитики Яндекса
-(AppMetrica) — само приложение никакую аналитику не запускает и о том, как вы
-им пользуетесь, ничего не сообщает. Отслеживание местоположения в SDK
-выключено.</p>
+разрешения, перечисленные ниже. Сама Kulora не пользуется Bluetooth, не
+смотрит на другие ваши приложения и ничего из этого SDK не передаёт — SDK
+читает это с телефона сам.</p>
+
+<p>Версии приложения, собранные для <strong>Рекламной сети
+Яндекса</strong>, показывают те же два баннера через Yandex Mobile Ads SDK.
+Он использует рекламный идентификатор и сведения об устройстве и соединении
+по <a href="https://yandex.com/legal/confidential/">политике
+конфиденциальности Яндекса</a> и приносит с собой библиотеку аналитики
+Яндекса (AppMetrica); отслеживание местоположения в нём выключено. Оба SDK
+входят в каждую сборку для Android, но используется только один, и ссылка
+<em>«Подробнее»</em> в вопросе ниже открывает политику того, который в вашем
+приложении.</p>
+
+<p>Само приложение никакую аналитику не запускает и о том, как вы им
+пользуетесь, ничего не сообщает.</p>
 
 <p><strong>Что не уходит ни в рекламную сеть, ни куда-либо ещё:</strong> ваши
 фото, измеренные цвета, сеансы, метки и заметки, импортированные палитры.
@@ -347,11 +393,20 @@ iPhone, iPad и компьютере рекламы нет.</p>
 автоматически при каждой сборке.</p>
 
 <p><strong>Сначала спрашиваем.</strong> Перед первой рекламой приложение
-спрашивает, можно ли использовать ваш рекламный идентификатор для её подбора.
-Если разрешить, реклама подбирается персонально. Если отказать, приложение
-останется бесплатным и реклама никуда не денется — её просто будут подбирать
-иначе. Ответ можно изменить в любой момент: <strong>«Настройки» → «Реклама» →
-«Использовать рекламный идентификатор»</strong>.</p>
+спрашивает, можно ли использовать ваш рекламный идентификатор для её подбора,
+и до ответа не запрашивает ни одной рекламы. Если разрешить, реклама
+подбирается персонально. Если отказать, приложение останется бесплатным и
+реклама никуда не денется — её просто будут подбирать без рекламного
+идентификатора, и рекламная сеть узнаёт об этом раньше, чем будет запрошена
+хоть одна реклама. Ответ можно изменить в любой момент: <strong>«Настройки» →
+«Реклама» → «Использовать рекламный идентификатор»</strong>, изменение
+действует сразу.</p>
+
+<p>Если приложение не сможет сообщить рекламной сети о вашем отказе — так
+быть не должно, но угадывать приложение не станет, — оно вообще не будет
+показывать рекламу, а не запросит её вопреки отказу. Рекламные места
+останутся пустыми, приложение — бесплатным. В самом вопросе и в строке под
+переключателем в настройках написано, что именно произойдёт.</p>
 
 <p>Сам рекламный идентификатор можно в любой момент сбросить или удалить в
 настройках Android: «Конфиденциальность» → «Реклама». Подбор цвета продолжает
@@ -366,7 +421,10 @@ iPhone, iPad и компьютере рекламы нет.</p>
   <tr><th>Разрешение</th><th>Зачем</th></tr>
   <tr><td>Интернет и состояние сети</td><td>Используются только рекламным SDK для загрузки рекламы. Собственный код приложения ими не пользуется.</td></tr>
   <tr><td>Рекламный идентификатор (<code>AD_ID</code>)</td><td>Объявлен рекламным SDK, чтобы подбирать и учитывать рекламу. Идентификатор можно в любой момент сбросить или удалить в настройках Android.</td></tr>
-  <tr><td>Источник установки Google Play</td><td>Объявлен библиотекой, от которой зависит рекламный SDK. Он сообщает, из какой кампании пришла установка.</td></tr>
+  <tr><td>Источник установки Google Play</td><td>Объявлен рекламным SDK и библиотекой, от которой он зависит. Он сообщает, из какой кампании пришла установка.</td></tr>
+  <tr><td>Рекламные тематики (<code>ACCESS_ADSERVICES_TOPICS</code>)</td><td>Объявлено Start.io SDK. Позволяет ему читать приблизительные тематики интересов, которые Android сам выводит из того, как вы пользуетесь телефоном. Kulora их не читает.</td></tr>
+  <tr><td>Состояние Wi-Fi (<code>ACCESS_WIFI_STATE</code>)</td><td>Объявлено Start.io SDK, который смотрит, какое у телефона соединение. Сама Kulora им не пользуется.</td></tr>
+  <tr><td>Запуск после включения телефона (<code>RECEIVE_BOOT_COMPLETED</code>)</td><td>Объявлено Start.io SDK, который после перезагрузки обновляет свои настройки. <strong>Сама Kulora при включении телефона ничего не делает</strong>: не открывает экранов, не показывает уведомлений и сама ничего не запрашивает.</td></tr>
 </table></div>
 <p>Разрешений на камеру, хранилище и местоположение у приложения нет: снимки
 делает системная камера, изображения выбираются в системном окне выбора
@@ -389,9 +447,11 @@ iPhone, iPad и компьютере рекламы нет.</p>
 <p>У нас нет никаких данных о вас, поэтому нам нечего удалять, выгружать или
 исправлять по запросу — но вы всегда можете написать. Рекламный
 идентификатор живёт в настройках Android и сбрасывается или удаляется там;
-данные, переданные рекламным SDK Яндексу, регулируются
+данные, переданные рекламным SDK в Start.io, регулируются
+<a href="https://www.start.io/policy/privacy-policy/">политикой
+конфиденциальности Start.io</a> (в версии, собранной для Яндекса, —
 <a href="https://yandex.com/legal/confidential/">политикой конфиденциальности
-Яндекса</a>.</p>
+Яндекса</a>).</p>
 
 <h2>Дети</h2>
 <p>Приложение не предназначено для детей. Само приложение ни у кого не
