@@ -176,14 +176,15 @@ permissions listed below. Kulora itself uses no Bluetooth, does not look at
 your other apps and gives the SDK none of this; the SDK reads it from the
 phone on its own account.</p>
 
-<p>Versions of the app built for the <strong>Yandex Advertising
-Network</strong> instead show the same two banners through the Yandex Mobile
+<p>A version of the app may show one or both banners through the
+<strong>Yandex Advertising Network</strong> instead, using the Yandex Mobile
 Ads SDK. It uses the advertising ID and information about the device and its
 connection, under <a href="https://yandex.com/legal/confidential/">Yandex's
 privacy policy</a>, and brings Yandex's analytics library (AppMetrica) with it
 as a dependency; its location tracking is switched off. Both SDKs are part of
-every Android build, but only one is ever used, and the <em>Details</em> link
-on the question below opens the policy of the one in your app.</p>
+every Android build, but each banner uses only one, and the <em>Details</em>
+link on the question below opens the policy of the network serving that
+banner. You are asked once, and your answer applies to both networks.</p>
 
 <p>The app itself starts no analytics and reports nothing about how you use
 it.</p>
@@ -248,7 +249,7 @@ correct on request — but you are welcome to ask. The advertising ID belongs
 to Android's settings and is reset or deleted there; data the ad SDK sent to
 Start.io is covered by
 <a href="https://www.start.io/policy/privacy-policy/">Start.io's privacy
-policy</a> (in a version built for Yandex,
+policy</a> (for a banner served by Yandex,
 <a href="https://yandex.com/legal/confidential/">Yandex's privacy
 policy</a>).</p>
 
@@ -374,15 +375,16 @@ Linux Secret Service). Снимки, сделанные в приложении,
 смотрит на другие ваши приложения и ничего из этого SDK не передаёт — SDK
 читает это с телефона сам.</p>
 
-<p>Версии приложения, собранные для <strong>Рекламной сети
-Яндекса</strong>, показывают те же два баннера через Yandex Mobile Ads SDK.
+<p>Версия приложения может показывать один или оба баннера через
+<strong>Рекламную сеть Яндекса</strong> (Yandex Mobile Ads SDK).
 Он использует рекламный идентификатор и сведения об устройстве и соединении
 по <a href="https://yandex.com/legal/confidential/">политике
 конфиденциальности Яндекса</a> и приносит с собой библиотеку аналитики
 Яндекса (AppMetrica); отслеживание местоположения в нём выключено. Оба SDK
-входят в каждую сборку для Android, но используется только один, и ссылка
-<em>«Подробнее»</em> в вопросе ниже открывает политику того, который в вашем
-приложении.</p>
+входят в каждую сборку для Android, но каждый баннер использует только один,
+и ссылка <em>«Подробнее»</em> в вопросе ниже открывает политику сети, которая
+показывает этот баннер. Вопрос задаётся один раз, и ответ действует для обеих
+сетей.</p>
 
 <p>Само приложение никакую аналитику не запускает и о том, как вы им
 пользуетесь, ничего не сообщает.</p>
@@ -449,7 +451,7 @@ Linux Secret Service). Снимки, сделанные в приложении,
 идентификатор живёт в настройках Android и сбрасывается или удаляется там;
 данные, переданные рекламным SDK в Start.io, регулируются
 <a href="https://www.start.io/policy/privacy-policy/">политикой
-конфиденциальности Start.io</a> (в версии, собранной для Яндекса, —
+конфиденциальности Start.io</a> (для баннера, который показывает Яндекс, —
 <a href="https://yandex.com/legal/confidential/">политикой конфиденциальности
 Яндекса</a>).</p>
 
