@@ -79,7 +79,7 @@
 
 <header>
   <h1>Kulora — Privacy Policy</h1>
-  <p class="when">Last updated: 12 October 2026</p>
+  <p class="when">Last updated: 15 October 2026</p>
   <nav class="langs"><a href="#en">English</a><a href="#ru">Русский</a> <a href="../">About the app</a></nav>
 </header>
 
@@ -163,28 +163,32 @@ would cover what you are measuring. There are no full-screen ads: the ad
 software's own ad at launch and its ad on returning to the app are both
 switched off. The web, iPhone, iPad and desktop versions show no ads.</p>
 
-<p>The ads are served by the <strong>Start.io SDK</strong>, which is part of
-the Android app. To do that it uses your device's <strong>advertising
-ID</strong> and information about the device and its network connection,
-such as your IP address, and it sends those to Start.io's servers.
-Start.io's own policy also lists the names of paired Bluetooth devices,
-device sensors, and a check of whether particular apps are installed on the
-phone. That collection is Start.io's, made under
-<a href="https://www.start.io/policy/privacy-policy/">Start.io's privacy
-policy</a> rather than ours, and it is the reason the app declares the
-permissions listed below. Kulora itself uses no Bluetooth, does not look at
-your other apps and gives the SDK none of this; the SDK reads it from the
-phone on its own account.</p>
+<p>The ads are served by the <strong>Yandex Mobile Ads SDK</strong>, which
+is part of the Android app. To do that it uses your device's
+<strong>advertising ID</strong> and information about the device and its
+network connection, such as your IP address, and it sends those to Yandex's
+servers. That collection is Yandex's, made under
+<a href="https://yandex.com/legal/confidential/">Yandex's privacy policy</a>
+rather than ours. The SDK brings Yandex's analytics library (AppMetrica) with
+it as a dependency; its location tracking is switched off, and Kulora itself
+starts no analytics.</p>
 
-<p>A version of the app may show one or both banners through the
-<strong>Yandex Advertising Network</strong> instead, using the Yandex Mobile
-Ads SDK. It uses the advertising ID and information about the device and its
-connection, under <a href="https://yandex.com/legal/confidential/">Yandex's
-privacy policy</a>, and brings Yandex's analytics library (AppMetrica) with it
-as a dependency; its location tracking is switched off. Both SDKs are part of
-every Android build, but each banner uses only one, and the <em>Details</em>
-link on the question below opens the policy of the network serving that
-banner. You are asked once, and your answer applies to both networks.</p>
+<p>A version of the app may show one or both banners through
+<strong>Start.io</strong> instead, using the Start.io SDK. It uses the same
+advertising ID and device information, and Start.io's own policy also lists
+the names of paired Bluetooth devices, device sensors, and a check of whether
+particular apps are installed on the phone; that collection is Start.io's,
+made under <a href="https://www.start.io/policy/privacy-policy/">Start.io's
+privacy policy</a>. Kulora itself uses no Bluetooth, does not look at your
+other apps and gives either SDK none of this — an SDK that reads it reads it
+from the phone on its own account. <strong>The version in the stores does not
+use Start.io</strong>, so its SDK is in the app and is never started.</p>
+
+<p>Both SDKs are part of every Android build, which is why the app declares
+the permissions listed below whichever network serves it. Each banner uses
+only one network, and the <em>Details</em> link on the question below opens
+the policy of the network serving that banner. You are asked once, and your
+answer applies to both networks.</p>
 
 <p>The app itself starts no analytics and reports nothing about how you use
 it.</p>
@@ -275,7 +279,7 @@ be announced in the app before it took effect.</p>
 
 <header>
   <h1>Kulora — Политика конфиденциальности</h1>
-  <p class="when">Обновлено: 12 октября 2026 года</p>
+  <p class="when">Обновлено: 15 октября 2026 года</p>
 </header>
 
 <div class="lead">
@@ -362,27 +366,33 @@ Linux Secret Service). Снимки, сделанные в приложении,
 возвращении в приложение выключена. В веб-версии, на iPhone, iPad и
 компьютере рекламы нет.</p>
 
-<p>Рекламу показывает <strong>Start.io SDK</strong>, входящий в приложение
-для Android. Для этого он использует <strong>рекламный
+<p>Рекламу показывает <strong>Yandex Mobile Ads SDK</strong>, входящий в
+приложение для Android. Для этого он использует <strong>рекламный
 идентификатор</strong> вашего устройства и сведения об устройстве и сетевом
-соединении, например IP-адрес, и передаёт их на серверы Start.io. В своей
-политике Start.io перечисляет также имена сопряжённых Bluetooth-устройств,
-датчики устройства и проверку того, установлены ли на телефоне те или иные
-приложения. Этот сбор ведёт Start.io на своих условиях, изложенных в её
-<a href="https://www.start.io/policy/privacy-policy/">политике
-конфиденциальности</a>, а не мы; именно поэтому приложение объявляет
-разрешения, перечисленные ниже. Сама Kulora не пользуется Bluetooth, не
-смотрит на другие ваши приложения и ничего из этого SDK не передаёт — SDK
-читает это с телефона сам.</p>
+соединении, например IP-адрес, и передаёт их на серверы Яндекса. Этот сбор
+ведёт Яндекс на своих условиях, изложенных в его
+<a href="https://yandex.com/legal/confidential/">политике
+конфиденциальности</a>, а не мы. Вместе с SDK в приложение попадает
+библиотека аналитики Яндекса (AppMetrica); отслеживание местоположения в нём
+выключено, и сама Kulora никакой аналитики не запускает.</p>
 
 <p>Версия приложения может показывать один или оба баннера через
-<strong>Рекламную сеть Яндекса</strong> (Yandex Mobile Ads SDK).
-Он использует рекламный идентификатор и сведения об устройстве и соединении
-по <a href="https://yandex.com/legal/confidential/">политике
-конфиденциальности Яндекса</a> и приносит с собой библиотеку аналитики
-Яндекса (AppMetrica); отслеживание местоположения в нём выключено. Оба SDK
-входят в каждую сборку для Android, но каждый баннер использует только один,
-и ссылка <em>«Подробнее»</em> в вопросе ниже открывает политику сети, которая
+<strong>Start.io</strong> (Start.io SDK). Он использует тот же рекламный
+идентификатор и сведения об устройстве, а в своей политике Start.io
+перечисляет также имена сопряжённых Bluetooth-устройств, датчики устройства
+и проверку того, установлены ли на телефоне те или иные приложения; этот
+сбор ведёт Start.io на своих условиях, изложенных в её
+<a href="https://www.start.io/policy/privacy-policy/">политике
+конфиденциальности</a>. Сама Kulora не пользуется Bluetooth, не смотрит на
+другие ваши приложения и ничего из этого ни одному SDK не передаёт — SDK,
+который это читает, читает с телефона сам. <strong>Версия в магазинах
+Start.io не использует</strong>, поэтому её SDK в приложении есть и ни разу
+не запускается.</p>
+
+<p>Оба SDK входят в каждую сборку для Android — поэтому приложение объявляет
+перечисленные ниже разрешения независимо от того, какая сеть показывает
+рекламу. Каждый баннер использует только одну сеть, и ссылка
+<em>«Подробнее»</em> в вопросе ниже открывает политику той сети, которая
 показывает этот баннер. Вопрос задаётся один раз, и ответ действует для обеих
 сетей.</p>
 
